@@ -82,3 +82,19 @@ Simulate CPU memory access through the full hierarchy.
 *   `include/`: Header files.
 *   `tests/`: Sample test scripts.
 *   `docs/`: Detailed design documentation.
+
+## Test Report Summary
+
+Recent automated tests (`tests/run_all_tests.bat`) demonstrate the following system behaviors:
+
+### 1. Allocation Strategies
+*   **Fragmentation**: Running `test_scenario_1.txt` with First Fit strategy resulted in **22.88% External Fragmentation** with 0% Internal Fragmentation for the requested sizes.
+*   **Cache Interaction**: Memory accesses correctly triggered L1/L2 cache lookups, with initial cold misses filling the cache lines.
+
+### 2. Buddy System
+*   **Splitting**: `test_buddy.txt` verified that a 100-byte request correctly splits a 1024-byte block down to a 128-byte block (Power of 2).
+*   **Coalescing**: Freeing adjacent buddies successfully triggered recursive merging, restoring the memory to a single 1024-byte free block.
+
+### 3. Virtual Memory & Cache
+*   **Page Faults**: `test_vm.txt` demonstrated demand paging. Sequential accesses to distinct pages caused Page Faults and subsequent loading into frames.
+*   **Address Translation**: Virtual Address `0x100` was correctly translated to Physical Address `0xC0` (Frame 3
