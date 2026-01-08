@@ -1,0 +1,53 @@
+Memory Management Simulator
+Type 'help' for commands.
+> Virtual Memory Initialized: 4 Frames of size 64
+> Virtual Address: 0x0
+  > Page Fault for VPN 0
+  [Disk Access] Loading page 0 from disk... (Latency simulated)
+  > Loaded VPN 0 into Frame 0
+Translated to Physical Address: 0x0
+L1 Cache MISS -> Accessing L2...
+L2 Cache MISS -> Main Memory Access
+> Virtual Address: 0x40
+  > Page Fault for VPN 1
+  [Disk Access] Loading page 1 from disk... (Latency simulated)
+  > Loaded VPN 1 into Frame 1
+Translated to Physical Address: 0x40
+L1 Cache MISS -> Accessing L2...
+L2 Cache MISS -> Main Memory Access
+> Virtual Address: 0x80
+  > Page Fault for VPN 2
+  [Disk Access] Loading page 2 from disk... (Latency simulated)
+  > Loaded VPN 2 into Frame 2
+Translated to Physical Address: 0x80
+L1 Cache MISS -> Accessing L2...
+L2 Cache MISS -> Main Memory Access
+> Virtual Address: 0x100
+  > Page Fault for VPN 4
+  [Disk Access] Loading page 4 from disk... (Latency simulated)
+  > Loaded VPN 4 into Frame 3
+Translated to Physical Address: 0xc0
+L1 Cache MISS -> Accessing L2...
+L2 Cache MISS -> Main Memory Access
+> Virtual Address: 0x0
+Translated to Physical Address: 0x0
+L1 Cache HIT
+> Virtual Address: 0x0
+Translated to Physical Address: 0x0
+L1 Cache HIT
+> Virtual Memory Statistics:
+  Page Hits:   2
+  Page Faults: 4
+  Fault Rate:  66.67%
+> [L1 Cache] Size: 1024B, Assoc: 2, Block: 64B
+  Hits: 2  Misses: 4  Hit Rate: 33.33%
+[L2 Cache] Size: 4096B, Assoc: 4, Block: 64B
+  Hits: 0  Misses: 4  Hit Rate: 0.00%
+> Page Table Dump (Valid Entries):
+  VPN   | Frame | Valid 
+  ------|-------|-------
+      4 |     3 | YES
+      2 |     2 | YES
+      1 |     1 | YES
+      0 |     0 | YES
+> 

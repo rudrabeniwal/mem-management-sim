@@ -1,0 +1,17 @@
+init 1024
+set allocator first_fit
+malloc 100
+malloc 200
+malloc 50
+dump memory
+free 2
+dump memory
+stats
+malloc 120
+dump memory
+access 0x0000
+access 0x0000
+access 0x0040
+access 0x1000
+cache stats
+exit

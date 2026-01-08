@@ -1,0 +1,35 @@
+Memory Management Simulator
+Type 'help' for commands.
+> Memory initialized with 1024 units.
+> Allocator set to Buddy System. (Please re-init memory if not power of 2)
+> Allocated Buddy Block id=1 (Size: 128) at 0x0
+> Allocated Buddy Block id=2 (Size: 128) at 0x80
+> Allocated Buddy Block id=3 (Size: 128) at 0x100
+> Allocated Buddy Block id=4 (Size: 128) at 0x180
+> 
+--- Memory Dump ---
+[0x0000 - 0x007F] USED (Size: 128, ID: 1)
+[0x0080 - 0x00FF] USED (Size: 128, ID: 2)
+[0x0100 - 0x017F] USED (Size: 128, ID: 3)
+[0x0180 - 0x01FF] USED (Size: 128, ID: 4)
+[0x0200 - 0x03FF] FREE (Size: 512)
+-------------------
+
+> Block 1 freed.
+> Block 2 freed.
+> 
+--- Memory Dump ---
+[0x0000 - 0x00FF] FREE (Size: 256)
+[0x0100 - 0x017F] USED (Size: 128, ID: 3)
+[0x0180 - 0x01FF] USED (Size: 128, ID: 4)
+[0x0200 - 0x03FF] FREE (Size: 512)
+-------------------
+
+> Block 3 freed.
+> Block 4 freed.
+> 
+--- Memory Dump ---
+[0x0000 - 0x03FF] FREE (Size: 1024)
+-------------------
+
+> 

@@ -1,0 +1,14 @@
+init 1024
+set allocator buddy
+malloc 100
+malloc 100
+malloc 100
+malloc 100
+dump memory
+free 1
+free 2
+dump memory
+free 3
+free 4
+dump memory
+exit

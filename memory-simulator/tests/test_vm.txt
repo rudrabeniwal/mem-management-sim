@@ -1,0 +1,11 @@
+vm init 256
+access 0x0000
+access 0x0040
+access 0x0080
+access 0x0100
+access 0x0000
+access 0x0000
+vm stats
+cache stats
+vm dump
+exit

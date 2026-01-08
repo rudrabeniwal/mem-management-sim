@@ -1,0 +1,57 @@
+Memory Management Simulator
+Type 'help' for commands.
+> Memory initialized with 1024 units.
+> Allocator set to First Fit
+> Allocated block id=1 at address=0x0
+> Allocated block id=2 at address=0x64
+> Allocated block id=3 at address=0x12C
+> 
+--- Memory Dump ---
+[0x0000 - 0x0063] USED (Size: 100, ID: 1)
+[0x0064 - 0x012B] USED (Size: 200, ID: 2)
+[0x012C - 0x015D] USED (Size: 50, ID: 3)
+[0x015E - 0x03FF] FREE (Size: 674)
+-------------------
+
+> Block 2 freed.
+> 
+--- Memory Dump ---
+[0x0000 - 0x0063] USED (Size: 100, ID: 1)
+[0x0064 - 0x012B] FREE (Size: 200)
+[0x012C - 0x015D] USED (Size: 50, ID: 3)
+[0x015E - 0x03FF] FREE (Size: 674)
+-------------------
+
+> Total Memory: 1024
+Used Memory:  150 (Requested: 150)
+Free Memory:  874
+Free Blocks:  2
+External Fragmentation: 22.88%
+Internal Fragmentation: 0 bytes (0.00%)
+Allocation Success Rate: 100.00% (3/3)
+> Allocated block id=4 at address=0x64
+> 
+--- Memory Dump ---
+[0x0000 - 0x0063] USED (Size: 100, ID: 1)
+[0x0064 - 0x00DB] USED (Size: 120, ID: 4)
+[0x00DC - 0x012B] FREE (Size: 80)
+[0x012C - 0x015D] USED (Size: 50, ID: 3)
+[0x015E - 0x03FF] FREE (Size: 674)
+-------------------
+
+> Physical Address: 0x0 (VM disabled)
+L1 Cache MISS -> Accessing L2...
+L2 Cache MISS -> Main Memory Access
+> Physical Address: 0x0 (VM disabled)
+L1 Cache HIT
+> Physical Address: 0x40 (VM disabled)
+L1 Cache MISS -> Accessing L2...
+L2 Cache MISS -> Main Memory Access
+> Physical Address: 0x1000 (VM disabled)
+L1 Cache MISS -> Accessing L2...
+L2 Cache MISS -> Main Memory Access
+> [L1 Cache] Size: 1024B, Assoc: 2, Block: 64B
+  Hits: 1  Misses: 3  Hit Rate: 25.00%
+[L2 Cache] Size: 4096B, Assoc: 4, Block: 64B
+  Hits: 0  Misses: 3  Hit Rate: 0.00%
+> 
