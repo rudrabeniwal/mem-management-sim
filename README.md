@@ -3,6 +3,12 @@
 A complete simulation of an Operating System's Memory Management Unit (MMU), implemented in C++.  
 This project demonstrates **Dynamic Memory Allocation**, **Multilevel Caching**, and **Virtual Memory Paging**.
 
+
+
+https://github.com/user-attachments/assets/a3332d15-9d88-486b-be7c-32b1a2767256
+
+
+
 ## Features
 
 1.  **Physical Memory Allocator**
