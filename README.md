@@ -91,7 +91,7 @@ Simulate CPU memory access through the full hierarchy.
 
 ## Test Report Summary
 
-Recent automated tests (`tests/run_all_tests.bat`) demonstrate the following system behaviors:
+Automated tests (`tests/run_all_tests.bat`) demonstrate the following system behaviors:
 
 ### 1. Allocation Strategies
 *   **Fragmentation**: Running `test_scenario_1.txt` with First Fit strategy resulted in **22.88% External Fragmentation** with 0% Internal Fragmentation for the requested sizes.
